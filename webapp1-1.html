@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <style>
+            .a1
+            {
+                height: 70px;
+                width: 100%;
+                background-color: #3b3b3d ;
+                margin-top:10px;
+            }
+            .a2
+            {
+                color: #ebac00 ;
+                font-size: 50px;
+                text-align: center;
+                margin-top: 10px;
+            
+            }
+            .b0
+            {
+                height: 1400px;
+                width: 100%;
+                background-color: black;
+                position: relative;    
+            }
+            
+            
+            .cont{
+                height: 300px;
+                width: 400px;
+                border-radius: 15% 15% 15% 15%;
+                position: absolute;
+                background-color: #262424;
+                box-shadow: 0px 0px 10px  whitesmoke;
+                margin-left: 35%;
+                margin-top: 5%;  
+            }
+            .cont:hover{
+                transform: scale(1.04);
+                background: #363940;
+                box-shadow: 0px 0px 10px #ebac00;
+                z-index: 1;
+            }
+            .b4{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .b5{
+                 padding-top: 30px;   
+            }
+            .b6{
+              
+                 padding-top: 20px;
+            }
+            .b7{
+                padding-left: 70px;
+                 padding-top: 13px;
+                color: #ebac00;
+                font-size: 17px;
+            }
+            .b8{
+                margin-top: 5%;
+                margin-left: 42%;
+
+            }
+            
+        </style>  
+        <nav class="a1">
+        <div >
+            <title>My movie watch list app</title>
+            <h2 class="a2" > WATCH LIST APP</h2>
+​
+        </div></nav>
+        <script>
+        function validate()
+            {
+                var name=document.mform.mname.value;
+                if(name==null||name=="")
+                {
+                    alert("please fill this page");
+                    return false;
+                }
+                var checkbox=document.mut1.value;
+                if(checkbox == false )
+                {
+                     alert("The checkbox isnt checked");   
+                }
+                else{
+                    alert("movie added to watch list");
+                    return true;
+                }
+            }
+            </script>
+    </head>
+    <body>
+        <form  name="mform">
+        <div id ="error"></div>
+        <div class="b0">
+       
+
+            <div class=" cont " >
+                <a class="b4 b5" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToyLBqNQfmwTiVMlHoyAknjezfXw_TWlwGQA&usqp=CAU" style="height: 100px;width: 150px"></a>
+                <a class="b4 b6"><input type="text"  placeholder="     Movie name..."   name="mname" id="mname"  style="height: 20px; width:200px"></a>
+                
+
+                <table><tr>
+                <th><a class="b4 b7"><input type="radio" name="muttu" id="mut1">Watched </a> </th>
+                <th><a class="b4 b7"><input type="radio" name="muttu" id="mut2">Unwatched</a></th>
+                </tr></table>
+
+
+                <button class=" b4 b8" style="height: 30px;width : 70px" onclick="validate()">Submit</button>
+
+            </div>
+
+        </div>
+        </table>
+
+    </body>
+    </form>
+</html>
