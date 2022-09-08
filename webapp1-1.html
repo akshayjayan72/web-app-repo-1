@@ -67,36 +67,41 @@
 
             }
             
-        </style>  
+        </style> 
+        
+        
         <nav class="a1">
         <div >
             <title>My movie watch list app</title>
             <h2 class="a2" > WATCH LIST APP</h2>
 ​
-        </div></nav>
+        </div>
+        </nav>
+
+
         <script>
-        function validate()
-            {
-                var name=document.mform.mname.value;
-                if(name==null||name=="")
+        function validate(){
+
+                var valid = false;
+
+                if(document.getElementById("mut1").checked){valid = true;}
+                if(document.getElementById("mut2").checked){valid = true;}
+                if(valid)
                 {
-                    alert("please fill this page");
-                    return false;
-                }
-                var checkbox=document.mut1.value;
-                if(checkbox == false )
-                {
-                     alert("The checkbox isnt checked");   
+                    alert("Movie added to Watchlist");
                 }
                 else{
-                    alert("movie added to watch list");
-                    return true;
+                    alert("Please check an option");
+                    return false;
                 }
             }
-            </script>
+        </script>
+
+
+
     </head>
     <body>
-        <form  name="mform">
+        <form  name="myform" onsubmit = "return validate()">
         <div id ="error"></div>
         <div class="b0">
        
@@ -112,12 +117,12 @@
                 </tr></table>
 
 
-                <button class=" b4 b8" style="height: 30px;width : 70px" onclick="validate()">Submit</button>
+                <button class=" b4 b8" style="height: 30px;width : 70px" >Submit</button>
 
             </div>
 
         </div>
-        </table>
+                </table>
 
     </body>
     </form>
